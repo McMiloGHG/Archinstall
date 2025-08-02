@@ -1,0 +1,36 @@
+{
+    "margin": "5",  // Margin around the bar
+    "font-family": "Font Awesome 5 Free 10",  // Font family and size, here Font Awesome size 10
+    "layer": "top",  // Position the bar at the top of the screen
+    "modules-left": ["hyprland/workspaces"],  // Left modules: Hyprland workspace indicator
+    "modules-center": ["clock"],  // Center module: clock display
+    "modules-right": ["pulseaudio", "custom/powermenu"],  // Right modules: volume and custom power menu
+
+    "hyprland/workspaces": {
+        "active-only": false,  // Show all workspaces, not only the active one
+        "all-outputs": true,  // Show workspaces on all monitors/outputs
+        "format": "{icon}",  // Display only the icon
+        "format-icons": {
+            "urgent": "",  // Icon for urgent workspace (e.g. alerts)
+            "active": "",  // Icon for active workspace
+            "default": ""  // Default icon for workspaces
+        }
+    },
+
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}"  // Date/time format, e.g. "Fri, 01. Aug  17:23"
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",  // Volume icon with current volume percentage
+        "format-muted": "⏻ muted",  // Display when muted
+        "scroll-step": 5  // Volume adjustment step in percent when scrolling
+    },
+
+    "custom/powermenu": {
+        "format": "",  // Power icon
+        "tooltip": false,  // Disable tooltip on hover
+        "on-click": "~/.config/rofi/powermenu.sh"  // Script to run when clicked (opens power menu)
+    }
+}
+

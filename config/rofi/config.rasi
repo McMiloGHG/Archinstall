@@ -1,0 +1,82 @@
+configuration {
+    display-drun: "";           // Display mode for drun (application launcher)
+    font: "Inter 15"; 
+    modi: "drun";               // Use drun mode (run desktop applications)
+    show-icons: true;           // Show icons in the menu
+    icon-theme: "Papirus";      // Icon theme to use
+}
+
+@theme "/dev/null"              // Override theme to empty (disables default theming)
+
+* {
+    bg: #191932;                // Background color (dark blue/purple)
+    bg-alt: #444b4a;            // Alternative background color
+
+    fg: #FFFFFF;                // Foreground (text) color white
+    fg-alt: #787c99;            // Alternative foreground color (grayish blue)
+
+    background-color: @bg;      // Set background color from variable @bg
+
+    border: 0;                  // No borders
+    margin: 0;                  // No margins
+    padding: 0;                 // No padding
+    spacing: 0;                 // No spacing between elements
+}
+
+window {
+    width:25%;                  // Window width 25% of screen
+}
+
+element {
+    text-color: @fg-alt;        // Text color alternative (lighter)
+    padding: 10 20;             // Padding: 10 top/bottom, 20 left/right
+    spacing: 5;                 // Spacing between elements
+}
+
+element selected {
+    text-color: @fg;            // Text color when selected (white)
+}
+
+element-text {
+    background-color: inherit;  // Inherit background color from parent
+    text-color: inherit;        // Inherit text color from parent
+}
+
+element-icon {
+    size: 25;                   // Icon size 25px
+}
+
+entry {
+    background-color: @bg;      // Background color from variable
+    padding: 15 15;              // **Typo here:** "pading" should be "padding"
+    text-color: @fg;            // Text color white
+    margin: 15 15;              // Margin 15px top/bottom and left/right
+    border-radius: 0px;         // No border radius (square corners)
+}
+
+inputbar {
+    children: [prompt, entry];  // Input bar contains prompt and entry fields
+}
+
+listview {
+    background-color: @bg;      // Background color of the list view
+    columns: 1;                 // Single column layout
+    lines: 5;                   // Show 5 lines in the list
+}
+
+mainbox {
+    background-color: @bg;      // Background color for main container
+    children: [inputbar, listview];  // Main container children
+}
+
+prompt {
+    background-color: @bg;      // Prompt background color
+    enabled: true;              // Prompt enabled
+    padding: 15 0 0 15;         // Padding: top 15, right 0, bottom 0, left 15
+    text-color: @fg;            // Text color white
+}
+
+* {
+    border-radius: 25px;        // Rounded corners on all elements
+}
+

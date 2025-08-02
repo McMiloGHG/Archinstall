@@ -1,0 +1,54 @@
+/* Global styles */
+* {
+    font: "Inter 10";          // Use Inter font, size 10
+    show-icons: false;         // Do not show icons in the menu
+    display-drun: "";          // Empty display mode for drun
+    prompt: "";                // No prompt text
+}
+
+@theme "/dev/null"             // Disable default theme, use custom styles below
+
+/* Reset styles for all elements */
+* {
+    background-color: #191932; // Dark blue/purple background
+    text-color: #FFFFFF;       // White text color
+    border: 0;                 // No borders
+    padding: 0;                // No padding
+    margin: 0;                 // No margin
+    border-radius: 25px;       // Rounded corners on all elements
+}
+
+/* Window settings */
+window {
+    width: 3%;                 // Window width is 3% of screen (very narrow)
+    anchor: northeast;         // Anchor window to the top-right corner
+    location: northeast;       // Position at the top-right corner
+    y-offset: -39;             // Vertical offset (upwards)
+    x-offset: 25;              // Horizontal offset (rightwards)
+}
+
+/* Main container */
+mainbox {
+    background-color: #191932; // Background color same as window
+    children: [listview];      // Contains the listview element
+}
+
+/* List view of menu items */
+listview {
+    columns: 1;                // Single column layout
+    lines: 4;                  // Show 4 lines (items)
+    margin: 10;                // Margin around the listview
+}
+
+/* Each menu element */
+element {
+    padding: 10;               // Padding inside each element
+    text-color: @text-color;   // Text color inherits global text color (white)
+}
+
+/* Style for selected element */
+element selected { 
+    background-color: #191932; // Same background color on selection (no highlight)
+    text-color: #ffffff;       // White text color when selected
+}
+

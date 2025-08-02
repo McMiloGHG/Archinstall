@@ -1,0 +1,32 @@
+/* Style for the Waybar window */
+window#waybar {
+    background-color: #191932;  /* Dark blueish background */
+    border-radius: 25px;        /* Rounded corners */
+    color: white;               /* Text color */
+    font-family: "Inter 10";    /* Font family and size */
+}
+
+/* Shared styles for several modules */
+#clock, 
+#workspaces,
+#pulseaudio, 
+#network, 
+#custom-notifications,
+#custom-powermenu {
+    border-radius: 25px;        /* Rounded corners for module containers */
+    background-color: transparent;  /* Transparent background */
+    padding: 0px 15px;          /* Horizontal padding inside modules */
+}
+
+/* Style for workspace buttons */
+#workspaces > button {
+    color: white;               /* Workspace button text color */
+}
+
+/* Style for active workspace button */
+#workspaces > button.active {
+    background-color: transparent; /* Transparent background for active button */
+    color: white;                   /* White text */
+    font-weight: bold;              /* Bold font for active workspace */
+}
+
